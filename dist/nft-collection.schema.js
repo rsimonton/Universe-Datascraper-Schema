@@ -40,8 +40,8 @@ __decorate([
 ], NFTCollection.prototype, "sentAt", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Date)
-], NFTCollection.prototype, "firstCheckAt", void 0);
+    __metadata("design:type", Boolean)
+], NFTCollection.prototype, "isProcessing", void 0);
 NFTCollection = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-collections' })
 ], NFTCollection);

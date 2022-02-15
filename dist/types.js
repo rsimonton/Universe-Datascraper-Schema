@@ -22,5 +22,6 @@ var MediaFileType;
     MediaFileType["Audio"] = "audio";
     MediaFileType["Model"] = "model";
     MediaFileType["Misc"] = "misc";
+    MediaFileType["IFRAME"] = "iframe";
 })(MediaFileType = exports.MediaFileType || (exports.MediaFileType = {}));
 //# sourceMappingURL=types.js.map

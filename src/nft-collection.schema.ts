@@ -23,7 +23,7 @@ export class NFTCollection {
   public sentAt: Date;
 
   @Prop()
-  public firstCheckAt: Date;
+  public isProcessing: boolean;
 }
 
 export type NFTCollectionDocument = NFTCollection & Document;

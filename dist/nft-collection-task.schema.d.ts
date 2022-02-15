@@ -8,6 +8,7 @@ export declare class NFTCollectionTask {
     endBlock: number;
     tokenType: string;
     status: MessageStatus;
+    errorMessage: string;
 }
 export declare type NFTCollectionTaskDocument = NFTCollectionTask & Document;
 export declare const NFTCollectionTaskSchema: SchemaFactory;

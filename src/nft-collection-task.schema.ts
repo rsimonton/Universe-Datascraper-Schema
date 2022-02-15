@@ -25,6 +25,9 @@ export class NFTCollectionTask {
     required: true,
   })
   public status: MessageStatus;
+
+  @Prop({trim: true})
+  public errorMessage: string;
 }
 
 export type NFTCollectionTaskDocument = NFTCollectionTask & Document;

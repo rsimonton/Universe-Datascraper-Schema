@@ -15,5 +15,6 @@ export declare enum MediaFileType {
     Video = "video",
     Audio = "audio",
     Model = "model",
-    Misc = "misc"
+    Misc = "misc",
+    IFRAME = "iframe"
 }

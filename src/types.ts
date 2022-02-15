@@ -18,4 +18,5 @@ export enum MediaFileType {
   Audio = 'audio',
   Model = 'model',
   Misc = 'misc',
+  IFRAME = 'iframe',
 }

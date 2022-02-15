@@ -7,7 +7,7 @@ export declare class NFTCollection {
     firstProcessedBlock: number;
     lastProcessedBlock: number;
     sentAt: Date;
-    firstCheckAt: Date;
+    isProcessing: boolean;
 }
 export declare type NFTCollectionDocument = NFTCollection & Document;
 export declare const NFTCollectionSchema: SchemaFactory;

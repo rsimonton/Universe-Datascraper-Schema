@@ -41,6 +41,10 @@ __decorate([
     }),
     __metadata("design:type", String)
 ], NFTCollectionTask.prototype, "status", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ trim: true }),
+    __metadata("design:type", String)
+], NFTCollectionTask.prototype, "errorMessage", void 0);
 NFTCollectionTask = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-collection-tasks' })
 ], NFTCollectionTask);
