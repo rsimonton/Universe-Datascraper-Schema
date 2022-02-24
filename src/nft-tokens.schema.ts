@@ -50,6 +50,9 @@ export class NFTToken {
   public metadataFetchError: string;
 
   @Prop()
+  public processingSentAt: Date;
+
+  @Prop()
   public sentAt: Date;
 
   @Prop()

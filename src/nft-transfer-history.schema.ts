@@ -19,7 +19,7 @@ export class NFTTransferHistory {
   @Prop({ required: true })
   public to: string;
 
-  @Prop()
+  @Prop({ index: true })
   public tokenId: string;
 
   @Prop()

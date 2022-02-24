@@ -24,6 +24,15 @@ export class NFTCollection {
 
   @Prop()
   public isProcessing: boolean;
+
+  @Prop()
+  public name: string;
+
+  @Prop()
+  public symbol: string;
+
+  @Prop()
+  public totalSupply: number;
 }
 
 export type NFTCollectionDocument = NFTCollection & Document;

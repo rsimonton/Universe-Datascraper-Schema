@@ -18,6 +18,7 @@ export declare class NFTToken {
     firstOwner: string;
     owners: Owner[];
     metadataFetchError: string;
+    processingSentAt: Date;
     sentAt: Date;
     sentForMediaAt: Date;
     alternativeMediaFiles: AlternativeMediaFile[];

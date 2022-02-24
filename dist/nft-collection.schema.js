@@ -42,6 +42,18 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Boolean)
 ], NFTCollection.prototype, "isProcessing", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], NFTCollection.prototype, "name", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], NFTCollection.prototype, "symbol", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], NFTCollection.prototype, "totalSupply", void 0);
 NFTCollection = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-collections' })
 ], NFTCollection);

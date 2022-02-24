@@ -35,7 +35,7 @@ __decorate([
     __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "to", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
+    (0, mongoose_1.Prop)({ index: true }),
     __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "tokenId", void 0);
 __decorate([
