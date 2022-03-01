@@ -46,5 +46,7 @@ export class NFTTransferHistory {
 
 export type NFTTransferHistoryDocument = NFTTransferHistory & Document;
 
-export const NFTTransferHistorySchema: SchemaFactory =
+export const NFTTransferHistorySchema =
   SchemaFactory.createForClass(NFTTransferHistory);
+
+NFTTransferHistorySchema.index({ contractAddress: 1, tokenId: 1, hash: 1 });

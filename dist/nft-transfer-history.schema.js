@@ -67,4 +67,5 @@ NFTTransferHistory = __decorate([
 ], NFTTransferHistory);
 exports.NFTTransferHistory = NFTTransferHistory;
 exports.NFTTransferHistorySchema = mongoose_1.SchemaFactory.createForClass(NFTTransferHistory);
+exports.NFTTransferHistorySchema.index({ contractAddress: 1, tokenId: 1, hash: 1 });
 //# sourceMappingURL=nft-transfer-history.schema.js.map
