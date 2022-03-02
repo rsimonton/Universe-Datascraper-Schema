@@ -9,34 +9,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFTTokenOwnersSchema = exports.NFTTokenOwners = void 0;
+exports.NFTTokenOwnerSchema = exports.NFTTokenOwner = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
-let NFTTokenOwners = class NFTTokenOwners {
+let NFTTokenOwner = class NFTTokenOwner {
 };
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", String)
-], NFTTokenOwners.prototype, "contractAddress", void 0);
+], NFTTokenOwner.prototype, "contractAddress", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", String)
-], NFTTokenOwners.prototype, "tokenId", void 0);
+], NFTTokenOwner.prototype, "tokenId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", String)
-], NFTTokenOwners.prototype, "address", void 0);
+], NFTTokenOwner.prototype, "address", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", String)
-], NFTTokenOwners.prototype, "transactionHash", void 0);
+], NFTTokenOwner.prototype, "transactionHash", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", Number)
-], NFTTokenOwners.prototype, "value", void 0);
-NFTTokenOwners = __decorate([
+], NFTTokenOwner.prototype, "value", void 0);
+NFTTokenOwner = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-token-owners' })
-], NFTTokenOwners);
-exports.NFTTokenOwners = NFTTokenOwners;
-exports.NFTTokenOwnersSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwners);
-exports.NFTTokenOwnersSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
-//# sourceMappingURL=nft-token-owners.schema.js.map
+], NFTTokenOwner);
+exports.NFTTokenOwner = NFTTokenOwner;
+exports.NFTTokenOwnerSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwner);
+exports.NFTTokenOwnerSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
+//# sourceMappingURL=nft-token-owner.schema.js.map

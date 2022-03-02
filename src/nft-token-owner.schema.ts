@@ -4,7 +4,7 @@ import { Document } from 'mongoose';
 //ERC721 and Cryptopunks only have 1 owner
 //ERC1155 can have multiple owners
 @Schema({ timestamps: true, collection: 'nft-token-owners' })
-export class NFTTokenOwners {
+export class NFTTokenOwner {
   @Prop({ trim: true, index: true, required: true })
   public contractAddress: string;
 
@@ -21,9 +21,9 @@ export class NFTTokenOwners {
   value: number;
 }
 
-export type NFTTokenOwnersDocument = NFTTokenOwners & Document;
+export type NFTTokenOwnerDocument = NFTTokenOwner & Document;
 
-export const NFTTokenOwnersSchema =
-  SchemaFactory.createForClass(NFTTokenOwners);
+export const NFTTokenOwnerSchema =
+  SchemaFactory.createForClass(NFTTokenOwner);
 
-NFTTokenOwnersSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
+NFTTokenOwnerSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
