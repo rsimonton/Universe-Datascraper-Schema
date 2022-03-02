@@ -9,6 +9,7 @@ export declare class NFTCollection {
     isProcessing: boolean;
     name: string;
     symbol: string;
+    owner: string;
     totalSupply: number;
 }
 export declare type NFTCollectionDocument = NFTCollection & Document;

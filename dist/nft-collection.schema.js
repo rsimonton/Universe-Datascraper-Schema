@@ -52,6 +52,10 @@ __decorate([
 ], NFTCollection.prototype, "symbol", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], NFTCollection.prototype, "owner", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], NFTCollection.prototype, "totalSupply", void 0);
 NFTCollection = __decorate([
