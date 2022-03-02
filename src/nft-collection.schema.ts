@@ -32,6 +32,9 @@ export class NFTCollection {
   public symbol: string;
 
   @Prop()
+  public owner: string;
+
+  @Prop()
   public totalSupply: number;
 }
 
