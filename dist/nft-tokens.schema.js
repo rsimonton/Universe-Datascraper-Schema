@@ -9,24 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFTTokensSchema = exports.NFTToken = exports.AlternativeMediaFile = exports.Owner = void 0;
+exports.NFTTokensSchema = exports.NFTToken = exports.AlternativeMediaFile = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const types_1 = require("./types");
-class Owner {
-}
-__decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
-    __metadata("design:type", String)
-], Owner.prototype, "address", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
-    __metadata("design:type", String)
-], Owner.prototype, "transactionHash", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", Number)
-], Owner.prototype, "value", void 0);
-exports.Owner = Owner;
 class AlternativeMediaFile {
 }
 __decorate([

@@ -1,9 +1,4 @@
 import { Document } from 'mongoose';
-export declare class Owner {
-    address: string;
-    transactionHash: string;
-    value: number;
-}
 export declare class AlternativeMediaFile {
     url: string;
     type: string;
