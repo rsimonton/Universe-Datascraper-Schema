@@ -2,17 +2,6 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { MediaFileType, SupportedTokenTypes } from './types';
 
-export class Owner {
-  @Prop({ trim: true, index: true, required: true })
-  address: string;
-
-  @Prop({ trim: true, index: true, required: true })
-  transactionHash: string;
-
-  @Prop({ required: true })
-  value: number;
-}
-
 export class AlternativeMediaFile {
   @Prop({ trim: true, required: true })
   url: string;

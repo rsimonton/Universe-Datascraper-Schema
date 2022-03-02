@@ -21,10 +21,9 @@ export class NFTTokenOwners {
   value: number;
 }
 
-export type NFTTokensDocument = NFTTokenOwners & Document;
+export type NFTTokenOwnersDocument = NFTTokenOwners & Document;
 
 export const NFTTokenOwnersSchema =
   SchemaFactory.createForClass(NFTTokenOwners);
 
-NFTTokenOwnersSchema.index({ contractAddress: 1, tokenId: 1, address: 1 }, { unique: true });
-NFTTokenOwnersSchema.index({ address: 1, transactionHash: 1 }, { unique: true });
+NFTTokenOwnersSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
