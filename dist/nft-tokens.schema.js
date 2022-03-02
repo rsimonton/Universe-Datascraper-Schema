@@ -66,10 +66,6 @@ __decorate([
 ], NFTToken.prototype, "firstOwner", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Array)
-], NFTToken.prototype, "owners", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], NFTToken.prototype, "metadataFetchError", void 0);
 __decorate([
@@ -98,6 +94,4 @@ NFTToken = __decorate([
 exports.NFTToken = NFTToken;
 exports.NFTTokensSchema = mongoose_1.SchemaFactory.createForClass(NFTToken);
 exports.NFTTokensSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
-exports.NFTTokensSchema.index({ "owners.address": 1 });
-exports.NFTTokensSchema.index({ "owners.transactionHash": 1 });
 //# sourceMappingURL=nft-tokens.schema.js.map
