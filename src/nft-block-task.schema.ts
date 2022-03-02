@@ -15,6 +15,9 @@ export class NFTBlockTask {
     required: true,
   })
   public status: MessageStatus;
+
+  @Prop({trim: true})
+  public errorMessage: string;
 }
 
 export type NFTBlockTaskDocument = NFTBlockTask & Document;
