@@ -12,4 +12,4 @@ export declare class NFTCollection {
     totalSupply: number;
 }
 export declare type NFTCollectionDocument = NFTCollection & Document;
-export declare const NFTCollectionSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+export declare const NFTCollectionSchema: import("mongoose").Schema<Document<NFTCollection, any, any>, import("mongoose").Model<Document<NFTCollection, any, any>, any, any, any>, any, any>;
