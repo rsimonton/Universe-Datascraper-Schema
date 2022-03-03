@@ -28,6 +28,10 @@ __decorate([
 ], NFTCollection.prototype, "createdAtBlock", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
+    __metadata("design:type", Boolean)
+], NFTCollection.prototype, "ignoreForRetrieveCreatedAtBlock", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], NFTCollection.prototype, "firstProcessedBlock", void 0);
 __decorate([
