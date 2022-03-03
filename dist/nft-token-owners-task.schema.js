@@ -9,30 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFTTokenOwnerTaskSchema = exports.NFTTokenOwnerTask = void 0;
+exports.NFTTokenOwnersTaskSchema = exports.NFTTokenOwnersTask = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
-let NFTTokenOwnerTask = class NFTTokenOwnerTask {
+let NFTTokenOwnersTask = class NFTTokenOwnersTask {
 };
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", String)
-], NFTTokenOwnerTask.prototype, "contractAddress", void 0);
+], NFTTokenOwnersTask.prototype, "contractAddress", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", String)
-], NFTTokenOwnerTask.prototype, "tokenId", void 0);
+], NFTTokenOwnersTask.prototype, "tokenId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", Number)
-], NFTTokenOwnerTask.prototype, "priority", void 0);
+], NFTTokenOwnersTask.prototype, "priority", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", Boolean)
-], NFTTokenOwnerTask.prototype, "isProcessing", void 0);
-NFTTokenOwnerTask = __decorate([
+], NFTTokenOwnersTask.prototype, "isProcessing", void 0);
+NFTTokenOwnersTask = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-token-owners-tasks' })
-], NFTTokenOwnerTask);
-exports.NFTTokenOwnerTask = NFTTokenOwnerTask;
-exports.NFTTokenOwnerTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwnerTask);
-exports.NFTTokenOwnerTaskSchema.index({ contractAddress: 1, tokenId: 1 });
+], NFTTokenOwnersTask);
+exports.NFTTokenOwnersTask = NFTTokenOwnersTask;
+exports.NFTTokenOwnersTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwnersTask);
+exports.NFTTokenOwnersTaskSchema.index({ contractAddress: 1, tokenId: 1 });
 //# sourceMappingURL=nft-token-owners-task.schema.js.map
