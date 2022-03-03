@@ -26,15 +26,15 @@ exports.AlternativeMediaFile = AlternativeMediaFile;
 let NFTToken = class NFTToken {
 };
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
 ], NFTToken.prototype, "contractAddress", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
 ], NFTToken.prototype, "tokenId", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ index: true, required: true, enum: types_1.SupportedTokenTypes }),
+    (0, mongoose_1.Prop)({ index: true, enum: types_1.SupportedTokenTypes }),
     __metadata("design:type", String)
 ], NFTToken.prototype, "tokenType", void 0);
 __decorate([

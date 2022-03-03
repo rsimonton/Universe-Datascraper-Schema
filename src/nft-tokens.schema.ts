@@ -12,13 +12,13 @@ export class AlternativeMediaFile {
 
 @Schema({ timestamps: true, collection: 'nft-tokens' })
 export class NFTToken {
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public contractAddress: string;
 
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public tokenId: string;
 
-  @Prop({ index: true, required: true, enum: SupportedTokenTypes })
+  @Prop({ index: true, enum: SupportedTokenTypes })
   public tokenType: string;
 
   @Prop()

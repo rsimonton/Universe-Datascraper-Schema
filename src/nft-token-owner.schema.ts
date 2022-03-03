@@ -5,16 +5,16 @@ import { Document } from 'mongoose';
 //ERC1155 can have multiple owners
 @Schema({ timestamps: true, collection: 'nft-token-owners' })
 export class NFTTokenOwner {
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public contractAddress: string;
 
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public tokenId: string;
 
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   address: string;
 
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   transactionHash: string;
 
   @Prop({ required: true })
