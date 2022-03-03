@@ -14,6 +14,9 @@ export class NFTCollection {
   public createdAtBlock: number;
 
   @Prop()
+  public ignoreForRetrieveCreatedAtBlock: boolean;
+
+  @Prop()
   public firstProcessedBlock: number;
 
   @Prop()

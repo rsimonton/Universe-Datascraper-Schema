@@ -3,6 +3,7 @@ export declare class NFTCollection {
     contractAddress: string;
     tokenType: string;
     createdAtBlock: number;
+    ignoreForRetrieveCreatedAtBlock: boolean;
     firstProcessedBlock: number;
     lastProcessedBlock: number;
     sentAt: Date;
