@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NFTTokenOwnersTaskSchema = exports.NFTTokenOwnersTask = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
+const types_1 = require("./types");
 let NFTTokenOwnersTask = class NFTTokenOwnersTask {
 };
 __decorate([
@@ -29,6 +30,10 @@ __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", Boolean)
 ], NFTTokenOwnersTask.prototype, "isProcessing", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], NFTTokenOwnersTask.prototype, "tokenType", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)

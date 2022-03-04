@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { SupportedTokenTypes } from './types';
 
 //ERC721 and Cryptopunks only have 1 owner
 //ERC1155 can have multiple owners
@@ -12,11 +13,14 @@ export class NFTTokenOwnersTask {
   public tokenId: string;
 
   @Prop({ trim: true, index: true, required: true })
-  priority: number;
+  public priority: number;
 
   @Prop({ trim: true, index: true, required: true })
-  isProcessing: boolean;
+  public isProcessing: boolean;
 
+  @Prop()
+  public tokenType: SupportedTokenTypes;
+  
   @Prop()
   public errorMessage: string;
 }
