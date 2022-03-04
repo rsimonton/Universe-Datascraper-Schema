@@ -16,6 +16,9 @@ export class NFTTokenOwnersTask {
 
   @Prop({ trim: true, index: true, required: true })
   isProcessing: boolean;
+
+  @Prop()
+  public errorMessage: string;
 }
 
 export type NFTTokenOwnersTaskDocument = NFTTokenOwnersTask & Document;

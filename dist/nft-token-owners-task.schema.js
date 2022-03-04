@@ -29,6 +29,10 @@ __decorate([
     (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
     __metadata("design:type", Boolean)
 ], NFTTokenOwnersTask.prototype, "isProcessing", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], NFTTokenOwnersTask.prototype, "errorMessage", void 0);
 NFTTokenOwnersTask = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-token-owners-tasks' })
 ], NFTTokenOwnersTask);
