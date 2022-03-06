@@ -6,6 +6,7 @@ export declare class NFTTokenOwnersTask {
     priority: number;
     isProcessing: boolean;
     tokenType: SupportedTokenTypes;
+    sentAt: Date;
     errorMessage: string;
 }
 export declare type NFTTokenOwnersTaskDocument = NFTTokenOwnersTask & Document;

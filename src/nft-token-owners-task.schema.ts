@@ -22,6 +22,9 @@ export class NFTTokenOwnersTask {
   public tokenType: SupportedTokenTypes;
   
   @Prop()
+  public sentAt: Date;
+  
+  @Prop()
   public errorMessage: string;
 }
 

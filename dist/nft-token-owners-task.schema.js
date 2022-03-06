@@ -36,6 +36,10 @@ __decorate([
 ], NFTTokenOwnersTask.prototype, "tokenType", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
+    __metadata("design:type", Date)
+], NFTTokenOwnersTask.prototype, "sentAt", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], NFTTokenOwnersTask.prototype, "errorMessage", void 0);
 NFTTokenOwnersTask = __decorate([
