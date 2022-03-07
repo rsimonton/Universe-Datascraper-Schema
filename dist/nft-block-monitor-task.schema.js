@@ -9,33 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFTBlockTaskSchema = exports.NFTBlockTask = void 0;
+exports.NFTBlockMonitorTaskSchema = exports.NFTBlockMonitorTask = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const types_1 = require("./types");
-let NFTBlockTask = class NFTBlockTask {
+let NFTBlockMonitorTask = class NFTBlockMonitorTask {
 };
 __decorate([
     (0, mongoose_1.Prop)({ index: true, require: true }),
     __metadata("design:type", String)
-], NFTBlockTask.prototype, "messageId", void 0);
+], NFTBlockMonitorTask.prototype, "messageId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ index: true, required: true }),
     __metadata("design:type", Number)
-], NFTBlockTask.prototype, "blockNum", void 0);
+], NFTBlockMonitorTask.prototype, "blockNum", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
         index: true,
         required: true,
     }),
     __metadata("design:type", String)
-], NFTBlockTask.prototype, "status", void 0);
+], NFTBlockMonitorTask.prototype, "status", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true }),
     __metadata("design:type", String)
-], NFTBlockTask.prototype, "errorMessage", void 0);
-NFTBlockTask = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-block-tasks' })
-], NFTBlockTask);
-exports.NFTBlockTask = NFTBlockTask;
-exports.NFTBlockTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTBlockTask);
-//# sourceMappingURL=nft-block-task.schema.js.map
+], NFTBlockMonitorTask.prototype, "errorMessage", void 0);
+NFTBlockMonitorTask = __decorate([
+    (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-block-monitor-tasks' })
+], NFTBlockMonitorTask);
+exports.NFTBlockMonitorTask = NFTBlockMonitorTask;
+exports.NFTBlockMonitorTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTBlockMonitorTask);
+//# sourceMappingURL=nft-block-monitor-task.schema.js.map

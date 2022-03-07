@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { MediaFileType, SupportedTokenTypes } from './types';
+import { MediaFileType, SourceTypes, SupportedTokenTypes } from './types';
 
 export class AlternativeMediaFile {
   @Prop({ trim: true, required: true })
@@ -47,6 +47,9 @@ export class NFTToken {
 
   @Prop({ default: false })
   public needToRefresh: boolean;
+
+  @Prop({ trim: true, enum: SourceTypes, default: SourceTypes.ARCHIVE })
+  public source: string;
 }
 
 export type NFTTokensDocument = NFTToken & Document;
@@ -56,4 +59,5 @@ export const NFTTokensSchema =
   SchemaFactory.createForClass(NFTToken);
 
 NFTTokensSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
+NFTTokensSchema.index({ source: 1 });
 

@@ -17,5 +17,6 @@ __exportStar(require("./nft-token-owner.schema"), exports);
 __exportStar(require("./nft-token-owners-task.schema"), exports);
 __exportStar(require("./nft-transfer-history.schema"), exports);
 __exportStar(require("./nft-block-task.schema"), exports);
+__exportStar(require("./nft-block-monitor-task.schema"), exports);
 __exportStar(require("./types"), exports);
 //# sourceMappingURL=index.js.map

@@ -2,8 +2,8 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { MessageStatus } from './types';
 
-@Schema({ timestamps: true, collection: 'nft-block-tasks' })
-export class NFTBlockTask {
+@Schema({ timestamps: true, collection: 'nft-block-monitor-tasks' })
+export class NFTBlockMonitorTask {
   @Prop({ index: true, require: true })
   public messageId: string;
 
@@ -20,7 +20,7 @@ export class NFTBlockTask {
   public errorMessage: string;
 }
 
-export type NFTBlockTaskDocument = NFTBlockTask & Document;
+export type NFTBlockMonitorTaskDocument = NFTBlockMonitorTask & Document;
 
-export const NFTBlockTaskSchema =
-  SchemaFactory.createForClass(NFTBlockTask);
+export const NFTBlockMonitorTaskSchema =
+  SchemaFactory.createForClass(NFTBlockMonitorTask);
