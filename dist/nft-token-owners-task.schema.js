@@ -31,6 +31,10 @@ __decorate([
     __metadata("design:type", Boolean)
 ], NFTTokenOwnersTask.prototype, "isProcessing", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    __metadata("design:type", String)
+], NFTTokenOwnersTask.prototype, "taskId", void 0);
+__decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], NFTTokenOwnersTask.prototype, "tokenType", void 0);
@@ -47,5 +51,5 @@ NFTTokenOwnersTask = __decorate([
 ], NFTTokenOwnersTask);
 exports.NFTTokenOwnersTask = NFTTokenOwnersTask;
 exports.NFTTokenOwnersTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwnersTask);
-exports.NFTTokenOwnersTaskSchema.index({ contractAddress: 1, tokenId: 1 });
+exports.NFTTokenOwnersTaskSchema.index({ contractAddress: 1, tokenId: 1, taskId: 1 });
 //# sourceMappingURL=nft-token-owners-task.schema.js.map

@@ -5,6 +5,7 @@ export declare class NFTTokenOwnersTask {
     tokenId: string;
     priority: number;
     isProcessing: boolean;
+    taskId: string;
     tokenType: SupportedTokenTypes;
     sentAt: Date;
     errorMessage: string;

@@ -18,12 +18,15 @@ export class NFTTokenOwnersTask {
   @Prop({ trim: true, index: true, required: true })
   public isProcessing: boolean;
 
+  @Prop({ trim: true, index: true, required: true })
+  public taskId: string
+
   @Prop()
   public tokenType: SupportedTokenTypes;
   
   @Prop()
   public sentAt: Date;
-  
+
   @Prop()
   public errorMessage: string;
 }
@@ -33,4 +36,4 @@ export type NFTTokenOwnersTaskDocument = NFTTokenOwnersTask & Document;
 export const NFTTokenOwnersTaskSchema =
   SchemaFactory.createForClass(NFTTokenOwnersTask);
 
-NFTTokenOwnersTaskSchema.index({ contractAddress: 1, tokenId: 1 });
+NFTTokenOwnersTaskSchema.index({ contractAddress: 1, tokenId: 1, taskId: 1 });
