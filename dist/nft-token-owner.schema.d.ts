@@ -5,6 +5,7 @@ export declare class NFTTokenOwner {
     address: string;
     transactionHash: string;
     value: number;
+    hexValue: string;
 }
 export declare type NFTTokenOwnerDocument = NFTTokenOwner & Document;
 export declare const NFTTokenOwnerSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;

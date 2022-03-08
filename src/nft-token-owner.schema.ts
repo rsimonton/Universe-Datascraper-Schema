@@ -17,8 +17,11 @@ export class NFTTokenOwner {
   @Prop({ trim: true, required: true })
   transactionHash: string;
 
-  @Prop({ required: true })
+  @Prop()
   value: number;
+
+  @Prop()
+  hexValue: string;
 }
 
 export type NFTTokenOwnerDocument = NFTTokenOwner & Document;
