@@ -27,6 +27,14 @@ __decorate([
     __metadata("design:type", String)
 ], NFTTokenOwner.prototype, "address", void 0);
 __decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], NFTTokenOwner.prototype, "blockNum", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], NFTTokenOwner.prototype, "logIndex", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
 ], NFTTokenOwner.prototype, "transactionHash", void 0);
@@ -52,4 +60,5 @@ NFTTokenOwner = __decorate([
 exports.NFTTokenOwner = NFTTokenOwner;
 exports.NFTTokenOwnerSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwner);
 exports.NFTTokenOwnerSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
+exports.NFTTokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
 //# sourceMappingURL=nft-token-owner.schema.js.map

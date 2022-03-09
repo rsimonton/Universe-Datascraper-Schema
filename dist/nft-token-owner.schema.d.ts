@@ -3,6 +3,8 @@ export declare class NFTTokenOwner {
     contractAddress: string;
     tokenId: string;
     address: string;
+    blockNum: number;
+    logIndex: number;
     transactionHash: string;
     value: number;
     hexValue: string;
