@@ -53,3 +53,4 @@ export const NFTTransferHistorySchema =
   SchemaFactory.createForClass(NFTTransferHistory);
 
 NFTTransferHistorySchema.index({ contractAddress: 1, tokenId: 1, hash: 1, logIndex: 1 });
+NFTTransferHistorySchema.index({ blockNum: 1, logIndex: 1 });
