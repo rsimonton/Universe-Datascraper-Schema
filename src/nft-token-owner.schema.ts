@@ -15,6 +15,12 @@ export class NFTTokenOwner {
   @Prop({ trim: true, required: true })
   address: string;
 
+  @Prop()
+  public blockNum: number;
+
+  @Prop()
+  public logIndex: number;
+
   @Prop({ trim: true, required: true })
   transactionHash: string;
 
@@ -37,3 +43,4 @@ export const NFTTokenOwnerSchema =
   SchemaFactory.createForClass(NFTTokenOwner);
 
 NFTTokenOwnerSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
+NFTTokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
