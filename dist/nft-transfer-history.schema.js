@@ -27,6 +27,10 @@ __decorate([
     __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "hash", void 0);
 __decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], NFTTransferHistory.prototype, "logIndex", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "from", void 0);

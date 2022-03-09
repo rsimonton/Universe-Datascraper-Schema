@@ -13,6 +13,9 @@ export class NFTTransferHistory {
   @Prop({ required: true })
   public hash: string;
 
+  @Prop()
+  public logIndex: number;
+
   @Prop({ required: true })
   public from: string;
 
