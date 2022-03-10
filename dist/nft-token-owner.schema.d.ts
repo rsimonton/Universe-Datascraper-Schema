@@ -6,8 +6,7 @@ export declare class NFTTokenOwner {
     blockNum: number;
     logIndex: number;
     transactionHash: string;
-    value: number;
-    hexValue: string;
+    value: string;
     tokenType: string;
     tokenName: string;
 }

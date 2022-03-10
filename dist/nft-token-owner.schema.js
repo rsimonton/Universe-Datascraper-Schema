@@ -40,12 +40,8 @@ __decorate([
 ], NFTTokenOwner.prototype, "transactionHash", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
-], NFTTokenOwner.prototype, "value", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], NFTTokenOwner.prototype, "hexValue", void 0);
+], NFTTokenOwner.prototype, "value", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, required: true, enum: types_1.SupportedTokenTypes }),
     __metadata("design:type", String)

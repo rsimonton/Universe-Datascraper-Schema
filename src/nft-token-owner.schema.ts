@@ -25,10 +25,7 @@ export class NFTTokenOwner {
   transactionHash: string;
 
   @Prop()
-  value: number;
-
-  @Prop()
-  hexValue: string;
+  value: string;
 
   @Prop({ trim: true, required: true, enum: SupportedTokenTypes })
   public tokenType: string;
