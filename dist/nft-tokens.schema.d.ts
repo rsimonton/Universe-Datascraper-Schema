@@ -1,9 +1,4 @@
 import { Document } from 'mongoose';
-export declare class Owner {
-    address: string;
-    transactionHash: string;
-    value: number;
-}
 export declare class AlternativeMediaFile {
     url: string;
     type: string;
@@ -15,7 +10,6 @@ export declare class NFTToken {
     externalDomainViewUrl: string;
     metadata: any;
     firstOwner: string;
-    owners: Owner[];
     metadataFetchError: string;
     processingSentAt: Date;
     sentAt: Date;
