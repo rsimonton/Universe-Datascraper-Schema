@@ -1,17 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { MediaFileType, SupportedTokenTypes } from './types';
-
-export class Owner {
-  @Prop({ trim: true, index: true, required: true })
-  address: string;
-
-  @Prop({ trim: true, index: true, required: true })
-  transactionHash: string;
-
-  @Prop({ required: true })
-  value: number;
-}
+import { MediaFileType, SourceTypes, SupportedTokenTypes } from './types';
 
 export class AlternativeMediaFile {
   @Prop({ trim: true, required: true })
@@ -23,13 +12,13 @@ export class AlternativeMediaFile {
 
 @Schema({ timestamps: true, collection: 'nft-tokens' })
 export class NFTToken {
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public contractAddress: string;
 
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public tokenId: string;
 
-  @Prop({ index: true, required: true, enum: SupportedTokenTypes })
+  @Prop({ index: true, enum: SupportedTokenTypes })
   public tokenType: string;
 
   @Prop()
@@ -40,11 +29,6 @@ export class NFTToken {
 
   @Prop()
   public firstOwner: string;
-
-  //ERC721 and Cryptopunks only have 1 owner
-  //ERC1155 can have multiple owners
-  @Prop()
-  public owners: Owner[];
 
   @Prop()
   public metadataFetchError: string;
@@ -63,6 +47,9 @@ export class NFTToken {
 
   @Prop({ default: false })
   public needToRefresh: boolean;
+
+  @Prop({ trim: true, enum: SourceTypes, default: SourceTypes.ARCHIVE })
+  public source: string;
 }
 
 export type NFTTokensDocument = NFTToken & Document;
@@ -72,6 +59,5 @@ export const NFTTokensSchema =
   SchemaFactory.createForClass(NFTToken);
 
 NFTTokensSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
-NFTTokensSchema.index({ "owners.address": 1 });
-NFTTokensSchema.index({ "owners.transactionHash": 1 });
+NFTTokensSchema.index({ source: 1 });
 

@@ -4,6 +4,7 @@ export enum MessageStatus {
   done = 'done',
   error = 'error',
   split = 'split',
+  empty = 'empty'
 }
 
 export enum SupportedTokenTypes {
@@ -19,4 +20,9 @@ export enum MediaFileType {
   Model = 'model',
   Misc = 'misc',
   IFRAME = 'iframe',
+}
+
+export enum SourceTypes {
+  ARCHIVE = 'ARCHIVE',
+  MONITOR = 'MONITOR',
 }

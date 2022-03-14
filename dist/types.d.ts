@@ -3,7 +3,8 @@ export declare enum MessageStatus {
     processing = "processing",
     done = "done",
     error = "error",
-    split = "split"
+    split = "split",
+    empty = "empty"
 }
 export declare enum SupportedTokenTypes {
     ERC721 = "ERC721",
@@ -17,4 +18,8 @@ export declare enum MediaFileType {
     Model = "model",
     Misc = "misc",
     IFRAME = "iframe"
+}
+export declare enum SourceTypes {
+    ARCHIVE = "ARCHIVE",
+    MONITOR = "MONITOR"
 }

@@ -3,6 +3,7 @@ export declare class NFTTransferHistory {
     contractAddress: string;
     blockNum: number;
     hash: string;
+    logIndex: number;
     from: string;
     to: string;
     tokenId: string;

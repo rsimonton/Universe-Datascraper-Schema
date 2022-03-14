@@ -15,7 +15,7 @@ const types_1 = require("./types");
 let NFTTransferHistory = class NFTTransferHistory {
 };
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "contractAddress", void 0);
 __decorate([
@@ -23,9 +23,13 @@ __decorate([
     __metadata("design:type", Number)
 ], NFTTransferHistory.prototype, "blockNum", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ index: true, required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "hash", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], NFTTransferHistory.prototype, "logIndex", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
@@ -35,7 +39,7 @@ __decorate([
     __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "to", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ index: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "tokenId", void 0);
 __decorate([
@@ -55,7 +59,7 @@ __decorate([
     __metadata("design:type", Object)
 ], NFTTransferHistory.prototype, "cryptopunks", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ index: true, required: true, enum: types_1.SupportedTokenTypes }),
+    (0, mongoose_1.Prop)({ required: true, enum: types_1.SupportedTokenTypes }),
     __metadata("design:type", String)
 ], NFTTransferHistory.prototype, "category", void 0);
 __decorate([
@@ -67,5 +71,6 @@ NFTTransferHistory = __decorate([
 ], NFTTransferHistory);
 exports.NFTTransferHistory = NFTTransferHistory;
 exports.NFTTransferHistorySchema = mongoose_1.SchemaFactory.createForClass(NFTTransferHistory);
-exports.NFTTransferHistorySchema.index({ contractAddress: 1, tokenId: 1, hash: 1 });
+exports.NFTTransferHistorySchema.index({ contractAddress: 1, tokenId: 1, hash: 1, logIndex: 1 });
+exports.NFTTransferHistorySchema.index({ blockNum: 1, logIndex: 1 });
 //# sourceMappingURL=nft-transfer-history.schema.js.map
