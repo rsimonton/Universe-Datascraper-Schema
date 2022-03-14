@@ -3,7 +3,8 @@ export declare enum MessageStatus {
     processing = "processing",
     done = "done",
     error = "error",
-    split = "split"
+    split = "split",
+    empty = "empty"
 }
 export declare enum SupportedTokenTypes {
     ERC721 = "ERC721",

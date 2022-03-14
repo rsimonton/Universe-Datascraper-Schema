@@ -8,6 +8,7 @@ var MessageStatus;
     MessageStatus["done"] = "done";
     MessageStatus["error"] = "error";
     MessageStatus["split"] = "split";
+    MessageStatus["empty"] = "empty";
 })(MessageStatus = exports.MessageStatus || (exports.MessageStatus = {}));
 var SupportedTokenTypes;
 (function (SupportedTokenTypes) {
