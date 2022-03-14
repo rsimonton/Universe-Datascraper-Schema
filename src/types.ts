@@ -4,6 +4,7 @@ export enum MessageStatus {
   done = 'done',
   error = 'error',
   split = 'split',
+  empty = 'empty'
 }
 
 export enum SupportedTokenTypes {
