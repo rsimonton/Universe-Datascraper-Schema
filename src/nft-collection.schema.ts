@@ -39,6 +39,15 @@ export class NFTCollection {
 
   @Prop()
   public vip: boolean;
+
+  @Prop()
+  public bannerImageUrl: string;
+
+  @Prop()
+  public imageUrl: string;
+
+  @Prop()
+  public description: string;
 }
 
 export type NFTCollectionDocument = NFTCollection & Document;
