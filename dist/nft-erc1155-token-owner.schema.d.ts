@@ -11,4 +11,4 @@ export declare class NFTErc1155TokenOwner {
     tokenName: string;
 }
 export declare type NFTErc1155TokenOwnerDocument = NFTErc1155TokenOwner & Document;
-export declare const NFT1155TokenOwnerSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+export declare const NFTErc1155TokenOwnerSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;

@@ -35,8 +35,8 @@ export class NFTErc1155TokenOwner {
 
 export type NFTErc1155TokenOwnerDocument = NFTErc1155TokenOwner & Document;
 
-export const NFT1155TokenOwnerSchema =
+export const NFTErc1155TokenOwnerSchema =
   SchemaFactory.createForClass(NFTErc1155TokenOwner);
 
-NFT1155TokenOwnerSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
-NFT1155TokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
+NFTErc1155TokenOwnerSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
+NFTErc1155TokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
