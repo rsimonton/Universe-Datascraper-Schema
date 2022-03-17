@@ -4,7 +4,8 @@ export declare enum MessageStatus {
     done = "done",
     error = "error",
     split = "split",
-    empty = "empty"
+    empty = "empty",
+    retry = "retry"
 }
 export declare enum SupportedTokenTypes {
     ERC721 = "ERC721",
