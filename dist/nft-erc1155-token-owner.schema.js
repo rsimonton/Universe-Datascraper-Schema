@@ -9,52 +9,52 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFTTokenOwnerSchema = exports.NFTTokenOwner = void 0;
+exports.NFT1155TokenOwnerSchema = exports.NFTErc1155TokenOwner = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const types_1 = require("./types");
-let NFTTokenOwner = class NFTTokenOwner {
+let NFTErc1155TokenOwner = class NFTErc1155TokenOwner {
 };
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
-], NFTTokenOwner.prototype, "contractAddress", void 0);
+], NFTErc1155TokenOwner.prototype, "contractAddress", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
-], NFTTokenOwner.prototype, "tokenId", void 0);
+], NFTErc1155TokenOwner.prototype, "tokenId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
-], NFTTokenOwner.prototype, "address", void 0);
+], NFTErc1155TokenOwner.prototype, "address", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
-], NFTTokenOwner.prototype, "blockNum", void 0);
+], NFTErc1155TokenOwner.prototype, "blockNum", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
-], NFTTokenOwner.prototype, "logIndex", void 0);
+], NFTErc1155TokenOwner.prototype, "logIndex", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
-], NFTTokenOwner.prototype, "transactionHash", void 0);
+], NFTErc1155TokenOwner.prototype, "transactionHash", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
-], NFTTokenOwner.prototype, "value", void 0);
+], NFTErc1155TokenOwner.prototype, "value", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true, required: true, enum: types_1.SupportedTokenTypes }),
     __metadata("design:type", String)
-], NFTTokenOwner.prototype, "tokenType", void 0);
+], NFTErc1155TokenOwner.prototype, "tokenType", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ trim: true }),
     __metadata("design:type", String)
-], NFTTokenOwner.prototype, "tokenName", void 0);
-NFTTokenOwner = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-token-owners' })
-], NFTTokenOwner);
-exports.NFTTokenOwner = NFTTokenOwner;
-exports.NFTTokenOwnerSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwner);
-exports.NFTTokenOwnerSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
-exports.NFTTokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
-//# sourceMappingURL=nft-token-owner.schema.js.map
+], NFTErc1155TokenOwner.prototype, "tokenName", void 0);
+NFTErc1155TokenOwner = __decorate([
+    (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-erc1155-token-owners' })
+], NFTErc1155TokenOwner);
+exports.NFTErc1155TokenOwner = NFTErc1155TokenOwner;
+exports.NFT1155TokenOwnerSchema = mongoose_1.SchemaFactory.createForClass(NFTErc1155TokenOwner);
+exports.NFT1155TokenOwnerSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
+exports.NFT1155TokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
+//# sourceMappingURL=nft-erc1155-token-owner.schema.js.map
