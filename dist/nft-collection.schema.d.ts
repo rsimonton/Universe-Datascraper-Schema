@@ -6,6 +6,7 @@ export declare class NFTCollection {
     ignoreForRetrieveCreatedAtBlock: boolean;
     firstProcessedBlock: number;
     lastProcessedBlock: number;
+    targetBlock: number;
     sentAt: Date;
     isProcessing: boolean;
     name: string;

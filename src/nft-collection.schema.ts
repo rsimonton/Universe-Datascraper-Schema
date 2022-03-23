@@ -23,6 +23,9 @@ export class NFTCollection {
   public lastProcessedBlock: number;
 
   @Prop()
+  public targetBlock: number;
+
+  @Prop()
   public sentAt: Date;
 
   @Prop()
