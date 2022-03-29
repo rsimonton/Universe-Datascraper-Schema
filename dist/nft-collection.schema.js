@@ -40,6 +40,10 @@ __decorate([
 ], NFTCollection.prototype, "lastProcessedBlock", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], NFTCollection.prototype, "targetBlock", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], NFTCollection.prototype, "sentAt", void 0);
 __decorate([
