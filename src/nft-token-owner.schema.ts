@@ -33,10 +33,34 @@ export class NFTTokenOwner {
   public tokenName: string;
 }
 
-export type NFTTokenOwnerDocument = NFTTokenOwner & Document;
+type NFTTokenOwnerDocument = NFTTokenOwner & Document;
 
-export const NFTTokenOwnerSchema =
+const NFTTokenOwnerSchema =
   SchemaFactory.createForClass(NFTTokenOwner);
 
-NFTTokenOwnerSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
-NFTTokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
+NFTTokenOwnerSchema.index(
+  { 
+    contractAddress: 1, 
+    tokenId: 1 
+  }, 
+  { 
+    unique: true 
+  }
+);
+NFTTokenOwnerSchema.index({ 
+  blockNum: -1, 
+  logIndex: -1 
+});
+NFTTokenOwnerSchema.index({ 
+  address: 1 
+});
+NFTTokenOwnerSchema.index({ 
+  contractAddress: 1, 
+  tokenId: 1, 
+  address: 1 
+});
+
+export {
+  NFTTokenOwnerDocument,
+  NFTTokenOwnerSchema,
+}
