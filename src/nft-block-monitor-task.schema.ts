@@ -4,10 +4,10 @@ import { MessageStatus } from './types';
 
 @Schema({ timestamps: true, collection: 'nft-block-monitor-tasks' })
 export class NFTBlockMonitorTask {
-  @Prop({ index: true, require: true })
+  @Prop({ require: true })
   public messageId: string;
 
-  @Prop({ index: true, required: true })
+  @Prop({ required: true })
   public blockNum: number;
 
   @Prop({
@@ -20,7 +20,15 @@ export class NFTBlockMonitorTask {
   public errorMessage: string;
 }
 
-export type NFTBlockMonitorTaskDocument = NFTBlockMonitorTask & Document;
+type NFTBlockMonitorTaskDocument = NFTBlockMonitorTask & Document;
 
-export const NFTBlockMonitorTaskSchema =
+const NFTBlockMonitorTaskSchema =
   SchemaFactory.createForClass(NFTBlockMonitorTask);
+
+// NFTBlockMonitorTaskSchema.index({ messageId: 1 });
+// NFTBlockMonitorTaskSchema.index({ blockNum: 1 });
+
+export {
+  NFTBlockMonitorTaskDocument,
+  NFTBlockMonitorTaskSchema,
+}

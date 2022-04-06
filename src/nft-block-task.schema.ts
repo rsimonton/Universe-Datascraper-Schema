@@ -4,14 +4,13 @@ import { MessageStatus } from './types';
 
 @Schema({ timestamps: true, collection: 'nft-block-tasks' })
 export class NFTBlockTask {
-  @Prop({ index: true, require: true })
+  @Prop({ require: true })
   public messageId: string;
 
-  @Prop({ index: true, required: true })
+  @Prop({ required: true })
   public blockNum: number;
 
   @Prop({
-    index: true,
     required: true,
   })
   public status: MessageStatus;
@@ -20,7 +19,16 @@ export class NFTBlockTask {
   public errorMessage: string;
 }
 
-export type NFTBlockTaskDocument = NFTBlockTask & Document;
+type NFTBlockTaskDocument = NFTBlockTask & Document;
 
-export const NFTBlockTaskSchema =
+const NFTBlockTaskSchema =
   SchemaFactory.createForClass(NFTBlockTask);
+
+// NFTBlockTaskSchema.index({ messageId: 1 });
+// NFTBlockTaskSchema.index({ blockNum: 1 });
+// NFTBlockTaskSchema.index({ status: 1 });
+
+export {
+  NFTBlockTaskDocument,
+  NFTBlockTaskSchema,
+}

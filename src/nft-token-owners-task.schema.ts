@@ -6,19 +6,19 @@ import { SupportedTokenTypes } from './types';
 //ERC1155 can have multiple owners
 @Schema({ timestamps: true, collection: 'nft-token-owners-tasks' })
 export class NFTTokenOwnersTask {
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public contractAddress: string;
 
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public tokenId: string;
 
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public priority: number;
 
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public isProcessing: boolean;
 
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public taskId: string
 
   @Prop()
@@ -31,9 +31,19 @@ export class NFTTokenOwnersTask {
   public errorMessage: string;
 }
 
-export type NFTTokenOwnersTaskDocument = NFTTokenOwnersTask & Document;
+type NFTTokenOwnersTaskDocument = NFTTokenOwnersTask & Document;
 
-export const NFTTokenOwnersTaskSchema =
+const NFTTokenOwnersTaskSchema =
   SchemaFactory.createForClass(NFTTokenOwnersTask);
 
-NFTTokenOwnersTaskSchema.index({ contractAddress: 1, tokenId: 1, taskId: 1 });
+// NFTTokenOwnersTaskSchema.index({ contractAddress: 1, tokenId: 1, taskId: 1 });
+// NFTTokenOwnersTaskSchema.index({ contractAddress: 1 });
+// NFTTokenOwnersTaskSchema.index({ tokenId: 1 });
+// NFTTokenOwnersTaskSchema.index({ priority: 1 });
+// NFTTokenOwnersTaskSchema.index({ isProcessing: 1 });
+// NFTTokenOwnersTaskSchema.index({ taskId: 1 });
+
+export {
+  NFTTokenOwnersTaskDocument,
+  NFTTokenOwnersTaskSchema,
+}
