@@ -47,10 +47,29 @@ export class NFTTransferHistory {
   public timeLastUpdated: string;
 }
 
-export type NFTTransferHistoryDocument = NFTTransferHistory & Document;
+type NFTTransferHistoryDocument = NFTTransferHistory & Document;
 
-export const NFTTransferHistorySchema =
+const NFTTransferHistorySchema =
   SchemaFactory.createForClass(NFTTransferHistory);
 
-NFTTransferHistorySchema.index({ contractAddress: 1, tokenId: 1, hash: 1, logIndex: 1 });
-NFTTransferHistorySchema.index({ blockNum: 1, logIndex: 1 });
+NFTTransferHistorySchema.index({ 
+  contractAddress: 1, 
+  tokenId: 1, 
+  hash: 1 
+});
+NFTTransferHistorySchema.index(
+  { 
+    contractAddress: 1, 
+    tokenId: 1, 
+    hash: 1, 
+    logIndex: 1 
+  }, 
+  { 
+    unique: true 
+  }
+);
+
+export {
+  NFTTransferHistoryDocument,
+  NFTTransferHistorySchema,
+}

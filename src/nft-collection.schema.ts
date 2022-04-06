@@ -4,10 +4,10 @@ import { SupportedTokenTypes } from "./types";
 
 @Schema({ timestamps: true, collection: "nft-collections" })
 export class NFTCollection {
-  @Prop({ required: true, trim: true, index: true, unique: true })
+  @Prop({ required: true, trim: true, unique: true })
   public contractAddress: string;
 
-  @Prop({ required: true, trim: true, index: true, enum: SupportedTokenTypes })
+  @Prop({ required: true, trim: true, enum: SupportedTokenTypes })
   public tokenType: string;
 
   @Prop()
@@ -44,12 +44,14 @@ export class NFTCollection {
   public vip: boolean;
 }
 
-export type NFTCollectionDocument = NFTCollection & Document;
+type NFTCollectionDocument = NFTCollection & Document;
 
-export const NFTCollectionSchema = SchemaFactory.createForClass(NFTCollection);
+const NFTCollectionSchema = SchemaFactory.createForClass(NFTCollection);
 
 NFTCollectionSchema.index({ contractAddress: 1 });
-NFTCollectionSchema.index(
-  { vip: 1 },
-  { partialFilterExpression: { vip: { $exists: true } } }
-);
+// NFTCollectionSchema.index({ tokenType: 1 });
+
+export {
+  NFTCollectionDocument,
+  NFTCollectionSchema,
+}
