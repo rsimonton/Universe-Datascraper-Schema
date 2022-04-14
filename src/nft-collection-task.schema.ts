@@ -5,23 +5,22 @@ import { MessageStatus, SupportedTokenTypes } from './types';
 
 @Schema({ timestamps: true, collection: 'nft-collection-tasks' })
 export class NFTCollectionTask {
-  @Prop({ index: true, require: true })
+  @Prop({ require: true })
   public messageId: string;
 
-  @Prop({ trim: true, index: true, required: true })
+  @Prop({ trim: true, required: true })
   public contractAddress: string;
 
-  @Prop({ index: true, required: true })
+  @Prop({ required: true })
   public startBlock: number;
 
-  @Prop({ index: true, required: true })
+  @Prop({ required: true })
   public endBlock: number;
 
-  @Prop({ trim: true, index: true, required: true, enum: SupportedTokenTypes })
+  @Prop({ trim: true, required: true, enum: SupportedTokenTypes })
   public tokenType: string;
 
   @Prop({
-    index: true,
     required: true,
   })
   public status: MessageStatus;
@@ -30,7 +29,19 @@ export class NFTCollectionTask {
   public errorMessage: string;
 }
 
-export type NFTCollectionTaskDocument = NFTCollectionTask & Document;
+type NFTCollectionTaskDocument = NFTCollectionTask & Document;
 
-export const NFTCollectionTaskSchema =
+const NFTCollectionTaskSchema =
   SchemaFactory.createForClass(NFTCollectionTask);
+
+// NFTCollectionTaskSchema.index({ messageId: 1 });
+// NFTCollectionTaskSchema.index({ contractAddress: 1 });
+// NFTCollectionTaskSchema.index({ startBlock: 1 });
+// NFTCollectionTaskSchema.index({ endBlock: 1 });
+// NFTCollectionTaskSchema.index({ tokenType: 1 });
+// NFTCollectionTaskSchema.index({ status: 1 });
+
+export {
+  NFTCollectionTaskDocument,
+  NFTCollectionTaskSchema,
+}

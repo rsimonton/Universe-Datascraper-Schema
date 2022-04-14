@@ -18,7 +18,7 @@ export class NFTToken {
   @Prop({ trim: true, required: true })
   public tokenId: string;
 
-  @Prop({ index: true, enum: SupportedTokenTypes })
+  @Prop({ enum: SupportedTokenTypes })
   public tokenType: string;
 
   @Prop()
@@ -52,12 +52,24 @@ export class NFTToken {
   public source: string;
 }
 
-export type NFTTokensDocument = NFTToken & Document;
+type NFTTokensDocument = NFTToken & Document;
 
-
-export const NFTTokensSchema =
+const NFTTokensSchema =
   SchemaFactory.createForClass(NFTToken);
 
-NFTTokensSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
-NFTTokensSchema.index({ source: 1 });
+NFTTokensSchema.index(
+  { 
+    contractAddress: 1, 
+    tokenId: 1 
+  }, 
+  { 
+    unique: true 
+  }
+);
+// NFTTokensSchema.index({ source: 1 });
+// NFTTokensSchema.index({ tokenType: 1 });
 
+export {
+  NFTTokensDocument,
+  NFTTokensSchema,
+}
