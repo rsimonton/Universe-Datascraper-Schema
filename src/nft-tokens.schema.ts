@@ -39,7 +39,7 @@ export class NFTToken {
   @Prop()
   public sentAt: Date;
 
-  @Prop()
+  @Prop({ default: null })
   public sentForMediaAt: Date;
 
   @Prop()
