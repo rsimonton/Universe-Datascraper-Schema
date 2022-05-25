@@ -48,6 +48,9 @@ export class NFTToken {
   @Prop({ default: false })
   public needToRefresh: boolean;
 
+  @Prop({ default: false })
+  public needToRefreshMediaFiles: boolean;
+
   @Prop({ trim: true, enum: SourceTypes, default: SourceTypes.ARCHIVE })
   public source: string;
 }
