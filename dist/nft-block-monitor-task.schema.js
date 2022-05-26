@@ -15,11 +15,11 @@ const types_1 = require("./types");
 let NFTBlockMonitorTask = class NFTBlockMonitorTask {
 };
 __decorate([
-    (0, mongoose_1.Prop)({ index: true, require: true }),
+    (0, mongoose_1.Prop)({ require: true }),
     __metadata("design:type", String)
 ], NFTBlockMonitorTask.prototype, "messageId", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ index: true, required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", Number)
 ], NFTBlockMonitorTask.prototype, "blockNum", void 0);
 __decorate([
@@ -37,5 +37,6 @@ NFTBlockMonitorTask = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-block-monitor-tasks' })
 ], NFTBlockMonitorTask);
 exports.NFTBlockMonitorTask = NFTBlockMonitorTask;
-exports.NFTBlockMonitorTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTBlockMonitorTask);
+const NFTBlockMonitorTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTBlockMonitorTask);
+exports.NFTBlockMonitorTaskSchema = NFTBlockMonitorTaskSchema;
 //# sourceMappingURL=nft-block-monitor-task.schema.js.map

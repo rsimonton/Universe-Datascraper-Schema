@@ -1,3 +1,11 @@
+/// <reference types="mongoose/types/aggregate" />
+/// <reference types="mongoose/types/connection" />
+/// <reference types="mongoose/types/cursor" />
+/// <reference types="mongoose/types/document" />
+/// <reference types="mongoose/types/error" />
+/// <reference types="mongoose/types/mongooseoptions" />
+/// <reference types="mongoose/types/pipelinestage" />
+/// <reference types="mongoose/types/schemaoptions" />
 import { Document } from "mongoose";
 export declare class NFTCollection {
     contractAddress: string;
@@ -14,5 +22,6 @@ export declare class NFTCollection {
     owner: string;
     vip: boolean;
 }
-export declare type NFTCollectionDocument = NFTCollection & Document;
-export declare const NFTCollectionSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+declare type NFTCollectionDocument = NFTCollection & Document;
+declare const NFTCollectionSchema: import("mongoose").Schema<NFTCollection, import("mongoose").Model<NFTCollection, any, any, any>, {}, {}>;
+export { NFTCollectionDocument, NFTCollectionSchema, };

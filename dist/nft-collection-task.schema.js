@@ -15,28 +15,27 @@ const types_1 = require("./types");
 let NFTCollectionTask = class NFTCollectionTask {
 };
 __decorate([
-    (0, mongoose_1.Prop)({ index: true, require: true }),
+    (0, mongoose_1.Prop)({ require: true }),
     __metadata("design:type", String)
 ], NFTCollectionTask.prototype, "messageId", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
 ], NFTCollectionTask.prototype, "contractAddress", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ index: true, required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", Number)
 ], NFTCollectionTask.prototype, "startBlock", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ index: true, required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", Number)
 ], NFTCollectionTask.prototype, "endBlock", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true, enum: types_1.SupportedTokenTypes }),
+    (0, mongoose_1.Prop)({ trim: true, required: true, enum: types_1.SupportedTokenTypes }),
     __metadata("design:type", String)
 ], NFTCollectionTask.prototype, "tokenType", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
-        index: true,
         required: true,
     }),
     __metadata("design:type", String)
@@ -49,5 +48,6 @@ NFTCollectionTask = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-collection-tasks' })
 ], NFTCollectionTask);
 exports.NFTCollectionTask = NFTCollectionTask;
-exports.NFTCollectionTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTCollectionTask);
+const NFTCollectionTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTCollectionTask);
+exports.NFTCollectionTaskSchema = NFTCollectionTaskSchema;
 //# sourceMappingURL=nft-collection-task.schema.js.map

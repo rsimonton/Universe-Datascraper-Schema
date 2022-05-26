@@ -54,7 +54,24 @@ NFTTokenOwner = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-token-owners' })
 ], NFTTokenOwner);
 exports.NFTTokenOwner = NFTTokenOwner;
-exports.NFTTokenOwnerSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwner);
-exports.NFTTokenOwnerSchema.index({ contractAddress: 1, tokenId: 1 }, { unique: true });
-exports.NFTTokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
+const NFTTokenOwnerSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwner);
+exports.NFTTokenOwnerSchema = NFTTokenOwnerSchema;
+NFTTokenOwnerSchema.index({
+    contractAddress: 1,
+    tokenId: 1
+}, {
+    unique: true
+});
+NFTTokenOwnerSchema.index({
+    blockNum: -1,
+    logIndex: -1
+});
+NFTTokenOwnerSchema.index({
+    address: 1
+});
+NFTTokenOwnerSchema.index({
+    contractAddress: 1,
+    tokenId: 1,
+    address: 1
+});
 //# sourceMappingURL=nft-token-owner.schema.js.map

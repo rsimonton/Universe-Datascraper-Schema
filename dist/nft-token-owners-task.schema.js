@@ -15,23 +15,23 @@ const types_1 = require("./types");
 let NFTTokenOwnersTask = class NFTTokenOwnersTask {
 };
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
 ], NFTTokenOwnersTask.prototype, "contractAddress", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
 ], NFTTokenOwnersTask.prototype, "tokenId", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", Number)
 ], NFTTokenOwnersTask.prototype, "priority", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", Boolean)
 ], NFTTokenOwnersTask.prototype, "isProcessing", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ trim: true, index: true, required: true }),
+    (0, mongoose_1.Prop)({ trim: true, required: true }),
     __metadata("design:type", String)
 ], NFTTokenOwnersTask.prototype, "taskId", void 0);
 __decorate([
@@ -50,6 +50,6 @@ NFTTokenOwnersTask = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-token-owners-tasks' })
 ], NFTTokenOwnersTask);
 exports.NFTTokenOwnersTask = NFTTokenOwnersTask;
-exports.NFTTokenOwnersTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwnersTask);
-exports.NFTTokenOwnersTaskSchema.index({ contractAddress: 1, tokenId: 1, taskId: 1 });
+const NFTTokenOwnersTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTTokenOwnersTask);
+exports.NFTTokenOwnersTaskSchema = NFTTokenOwnersTaskSchema;
 //# sourceMappingURL=nft-token-owners-task.schema.js.map

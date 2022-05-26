@@ -70,7 +70,19 @@ NFTTransferHistory = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-transfer-histories' })
 ], NFTTransferHistory);
 exports.NFTTransferHistory = NFTTransferHistory;
-exports.NFTTransferHistorySchema = mongoose_1.SchemaFactory.createForClass(NFTTransferHistory);
-exports.NFTTransferHistorySchema.index({ contractAddress: 1, tokenId: 1, hash: 1, logIndex: 1 });
-exports.NFTTransferHistorySchema.index({ blockNum: 1, logIndex: 1 });
+const NFTTransferHistorySchema = mongoose_1.SchemaFactory.createForClass(NFTTransferHistory);
+exports.NFTTransferHistorySchema = NFTTransferHistorySchema;
+NFTTransferHistorySchema.index({
+    contractAddress: 1,
+    tokenId: 1,
+    hash: 1
+});
+NFTTransferHistorySchema.index({
+    contractAddress: 1,
+    tokenId: 1,
+    hash: 1,
+    logIndex: 1
+}, {
+    unique: true
+});
 //# sourceMappingURL=nft-transfer-history.schema.js.map

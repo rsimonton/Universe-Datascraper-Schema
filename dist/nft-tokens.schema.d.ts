@@ -1,3 +1,11 @@
+/// <reference types="mongoose/types/aggregate" />
+/// <reference types="mongoose/types/connection" />
+/// <reference types="mongoose/types/cursor" />
+/// <reference types="mongoose/types/document" />
+/// <reference types="mongoose/types/error" />
+/// <reference types="mongoose/types/mongooseoptions" />
+/// <reference types="mongoose/types/pipelinestage" />
+/// <reference types="mongoose/types/schemaoptions" />
 import { Document } from 'mongoose';
 export declare class AlternativeMediaFile {
     url: string;
@@ -16,7 +24,9 @@ export declare class NFTToken {
     sentForMediaAt: Date;
     alternativeMediaFiles: AlternativeMediaFile[];
     needToRefresh: boolean;
+    needToRefreshMediaFiles: boolean;
     source: string;
 }
-export declare type NFTTokensDocument = NFTToken & Document;
-export declare const NFTTokensSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+declare type NFTTokensDocument = NFTToken & Document;
+declare const NFTTokensSchema: import("mongoose").Schema<NFTToken, import("mongoose").Model<NFTToken, any, any, any>, {}, {}>;
+export { NFTTokensDocument, NFTTokensSchema, };

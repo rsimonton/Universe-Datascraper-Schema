@@ -54,7 +54,18 @@ NFTErc1155TokenOwner = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-erc1155-token-owners' })
 ], NFTErc1155TokenOwner);
 exports.NFTErc1155TokenOwner = NFTErc1155TokenOwner;
-exports.NFTErc1155TokenOwnerSchema = mongoose_1.SchemaFactory.createForClass(NFTErc1155TokenOwner);
-exports.NFTErc1155TokenOwnerSchema.index({ contractAddress: 1, tokenId: 1, address: 1, transactionHash: 1 }, { unique: true });
-exports.NFTErc1155TokenOwnerSchema.index({ blockNum: -1, logIndex: -1 });
+const NFTErc1155TokenOwnerSchema = mongoose_1.SchemaFactory.createForClass(NFTErc1155TokenOwner);
+exports.NFTErc1155TokenOwnerSchema = NFTErc1155TokenOwnerSchema;
+NFTErc1155TokenOwnerSchema.index({
+    contractAddress: 1,
+    tokenId: 1,
+    address: 1,
+    transactionHash: 1
+}, {
+    unique: true
+});
+NFTErc1155TokenOwnerSchema.index({
+    blockNum: -1,
+    logIndex: -1
+});
 //# sourceMappingURL=nft-erc1155-token-owner.schema.js.map
